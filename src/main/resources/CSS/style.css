@@ -2,3 +2,17 @@
     -fx-background-color: #354F52;
     -fx-background-radius: 10px;
 }
+.over-anchor{
+    -fx-background-color: #CAD2C5;
+    -fx-background-radius: 10px;
+}
+.exit-btn{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: #1e1e1e;
+}
+
