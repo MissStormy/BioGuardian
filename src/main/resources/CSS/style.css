@@ -1,5 +1,5 @@
 .bg-anchor{
-    -fx-background-color: #354F52;
+    -fx-background-color: #264f20;
     -fx-background-radius: 10px;
 }
 .over-anchor{
@@ -14,5 +14,49 @@
     -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 1em; /* 12 */
     -fx-text-fill: #1e1e1e;
+}
+.exit-btn:hover{
+    -fx-background-color: #84A98C;
+    -fx-scale-y: 1.1;
+    -fx-background-radius: 10px;
+}
+.menu-btn{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-text-fill: #1e1e1e;
+}
+.menu-btn:hover{
+    -fx-background-color: #84A98C;
+    -fx-scale-y: 1.1;
+    -fx-background-radius: 10px;
+}
+.menu-btn:pressed{
+    -fx-background-color: transparent;
+    -fx-border-color: #84A98C;
+    -fx-border-width: 0 0 0 5px;
+}
+.menu-btn:disabled{
+    -fx-background-color: transparent;
+    -fx-border-color: #84A98C;
+    -fx-border-width: 0 0 0 5px;
+}
+.label-title{
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 30px;
+}
+.label-subtitle{
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 20px;
+}
+.text-field {
+    -fx-background-color: #52796F , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+.text-field:focused {
+    -fx-background-color: #52796F , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
 }
 
