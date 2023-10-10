@@ -1,12 +1,14 @@
 package com.bioguardian.bioguardian;
 
 import com.bioguardian.bioguardian.util.R;
+import com.bioguardian.bioguardian.domain.Planta;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+import java.sql.*;
 
 public class HerbDAO {
     //Creamos una nueva conexión con la BBDD

@@ -12,25 +12,25 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="794.0" styleClass="bg-anchor" stylesheets="@../../../CSS/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bioguardian.bioguardian.AppCtrl">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="794.0" styleClass="bg-anchor" stylesheets="@../../../CSS/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bioguardian.bioguardian.AppCtrl">
    <children>
       <Button fx:id="ExitBtn" layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#OnClickClose" prefHeight="31.0" prefWidth="31.0" styleClass="exit-btn" text="X" />
       <AnchorPane fx:id="VenomPane" layoutX="121.0" layoutY="9.0" prefHeight="530.0" prefWidth="658.0" styleClass="over-anchor">
          <children>
             <Label layoutX="205.0" layoutY="22.0" prefHeight="38.0" prefWidth="247.0" styleClass="label-title" text="Plantas venenosas" underline="true" />
-            <TextField layoutX="72.0" layoutY="117.0" prefHeight="26.0" prefWidth="205.0" />
-            <TextField layoutX="383.0" layoutY="117.0" prefHeight="26.0" prefWidth="205.0" />
-            <TextField layoutX="72.0" layoutY="238.0" prefHeight="26.0" prefWidth="205.0" />
-            <Button layoutX="72.0" layoutY="329.0" mnemonicParsing="false" text="Guardar" />
-            <Button layoutX="216.0" layoutY="329.0" mnemonicParsing="false" text="Cancelar" />
-            <Button layoutX="147.0" layoutY="397.0" mnemonicParsing="false" text="Limpiar" />
+            <TextField fx:id="VNTxt" layoutX="72.0" layoutY="117.0" prefHeight="26.0" prefWidth="205.0" promptText="Nombre de la planta" />
+            <TextField fx:id="VLNTxt" layoutX="383.0" layoutY="117.0" prefHeight="26.0" prefWidth="205.0" promptText="Nombre en latin" />
+            <Button fx:id="GuardarBtn" layoutX="72.0" layoutY="329.0" mnemonicParsing="false" onAction="#OnClickSave" text="Guardar" />
+            <Button fx:id="CancelBtn" layoutX="216.0" layoutY="329.0" mnemonicParsing="false" onAction="#OnClickCancel" text="Cancelar" />
+            <Button fx:id="CleanBtn" layoutX="147.0" layoutY="397.0" mnemonicParsing="false" onAction="#OnClickClean" text="Limpiar" />
             <ImageView fitHeight="206.0" fitWidth="218.0" layoutX="383.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/favicon/Transbg.png" />
                </image>
             </ImageView>
-            <Button layoutX="451.0" layoutY="433.0" mnemonicParsing="false" text="Subir foto" />
-            <ComboBox layoutX="72.0" layoutY="177.0" prefHeight="26.0" prefWidth="95.0" promptText="Tipo" />
+            <Button fx:id="FotoBtn" layoutX="451.0" layoutY="433.0" mnemonicParsing="false" onAction="#OnClickFoto" text="Subir foto" />
+            <ComboBox fx:id="CmbTipo" layoutX="72.0" layoutY="177.0" prefHeight="26.0" prefWidth="95.0" promptText="Tipo" />
+            <ComboBox fx:id="CmbMortal" layoutX="72.0" layoutY="239.0" prefHeight="26.0" prefWidth="95.0" promptText="Mortal" />
          </children>
          <effect>
             <DropShadow />
@@ -38,9 +38,8 @@
       <AnchorPane fx:id="HealPane" layoutX="121.0" layoutY="9.0" prefHeight="530.0" prefWidth="658.0" styleClass="over-anchor" visible="false">
          <children>
             <Label layoutX="196.0" layoutY="27.0" prefHeight="38.0" prefWidth="266.0" styleClass="label-title" text="Plantas medicinales" underline="true" />
-            <TextField layoutX="71.0" layoutY="118.0" prefHeight="26.0" prefWidth="205.0" />
-            <TextField layoutX="382.0" layoutY="118.0" prefHeight="26.0" prefWidth="205.0" />
-            <TextField layoutX="71.0" layoutY="239.0" prefHeight="26.0" prefWidth="205.0" />
+            <TextField fx:id="MNtxt" layoutX="71.0" layoutY="118.0" prefHeight="26.0" prefWidth="205.0" promptText="Nombre de planta" />
+            <TextField layoutX="382.0" layoutY="118.0" prefHeight="26.0" prefWidth="205.0" promptText="Nombre en latin" />
             <Button layoutX="71.0" layoutY="330.0" mnemonicParsing="false" text="Guardar" />
             <Button layoutX="215.0" layoutY="330.0" mnemonicParsing="false" text="Cancelar" />
             <Button layoutX="146.0" layoutY="398.0" mnemonicParsing="false" text="Limpiar" />

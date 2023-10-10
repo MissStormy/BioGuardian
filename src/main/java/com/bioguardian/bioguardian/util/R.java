@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.net.URL;
 
 public class R {
-    //TODO: descubrir para que sirve esto y explicarlo
+    
     public static InputStream getImage(String name) {
         return Thread.currentThread().getContextClassLoader().getResourceAsStream("images" + File.separator + name);
     }
@@ -15,6 +15,6 @@ public class R {
     }
 
     public static URL getUI(String name) {
-        return Thread.currentThread().getContextClassLoader().getResource("ui" + File.separator + name);
+        return Thread.currentThread().getContextClassLoader().getResource("bioguardian" + File.separator + name);
     }
 }
