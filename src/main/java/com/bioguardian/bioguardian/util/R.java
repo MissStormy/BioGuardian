@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.net.URL;
 
 public class R {
-    
+
     public static InputStream getImage(String name) {
         return Thread.currentThread().getContextClassLoader().getResourceAsStream("images" + File.separator + name);
     }

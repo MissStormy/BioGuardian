@@ -16,17 +16,18 @@ public class HerbDAO {
     //Con esta función cogemos los datos de database.properties y los usamos para
     //generar la conexión sin tener que andar haciendolo a mano
     public void conectar() throws ClassNotFoundException, SQLException, IOException {
-        Properties configuration = new Properties();
-        configuration.load(R.getProperties("database.properties"));
-        String host = configuration.getProperty("host");
-        String port = configuration.getProperty("port");
-        String name = configuration.getProperty("name");
-        String username = configuration.getProperty("username");
-        String password = configuration.getProperty("password");
+        //Properties configuration = new Properties();
+        //configuration.load(R.getProperties("database.properties"));
+        //String host = configuration.getProperty("host");
+        //String port = configuration.getProperty("port");
+        //String name = configuration.getProperty("name");
+        //String username = configuration.getProperty("username");
+        //String password = configuration.getProperty("password");
 
         Class.forName("com.mysql.cj.jdbc.Driver");
-        conexion = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + name + "?serverTimezone=UTC",
-                username, password);
+        //conexion = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + name + "?serverTimezone=UTC",
+        //        username, password);
+        conexion = DriverManager.getConnection("jdbc:mysql://" + "localhost" + ":" + 3306 + "/" + "herbolario" + "?serverTimezone=UTC", "root", "root");
     }
     //Y esta nos sirve para desconectar la BBDD una vez ya tenemos los cambios
     //hechos
