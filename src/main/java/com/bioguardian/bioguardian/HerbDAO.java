@@ -16,6 +16,7 @@ public class HerbDAO {
     //Con esta función cogemos los datos de database.properties y los usamos para
     //generar la conexión sin tener que andar haciendolo a mano
     public void conectar() throws ClassNotFoundException, SQLException, IOException {
+        //ESTO NO ESTA COGIENDO LOS DATOS DEL PROPERTIES, ASI QUE LOS METEMOS A MANO
         //Properties configuration = new Properties();
         //configuration.load(R.getProperties("database.properties"));
         //String host = configuration.getProperty("host");
